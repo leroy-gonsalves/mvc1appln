@@ -1,0 +1,32 @@
+﻿@model MVCAppln_1.ViewModel.EmployeeListViewModel
+@{
+    ViewBag.Title = "Index";
+}
+Hello ,@Model.UserName
+<hr />
+<div>
+    <table>
+        <tr>
+            <th>Employee Name</th>
+            <th>Salary</th>
+        </tr>
+        @foreach (MVCAppln_1.ViewModel.EmployeeViewModel item in Model.Employee)
+        {
+            <tr>
+                <td>@item.EmployeeName</td>
+                <td style="background-color:@item.SalaryColor">@item.Salary</td>
+            </tr>
+        }
+    </table>
+    @*@{
+        MvcHtmlString result = Html.Partial("Footer", Model.FooterData);
+        string finalResult = result.ToHtmlString().Replace("2015", "20000");
+    }
+    @MvcHtmlString.Create(finalResult)*@
+    @*<a href="/Employee/AddNew">Add New</a> <br />*@
+
+    <a href="/Authentication/Logout">Logout</a>
+    @{
+        Html.RenderAction("GetAddNewLink");
+    }
+</div>
