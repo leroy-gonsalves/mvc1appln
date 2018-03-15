@@ -1,11 +1,19 @@
 ﻿@model MVCAppln_1.ViewModel.EmployeeListViewModel
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
 }
-Hello ,@Model.UserName
-<hr />
+
+@section TitleSection{
+    MyView
+}
+@section ContentBody
+{
 <div>
-    <table>
+    @{
+        Html.RenderAction("GetAddNewLink");
+    }
+    <table border="1">
         <tr>
             <th>Employee Name</th>
             <th>Salary</th>
@@ -18,15 +26,7 @@ Hello ,@Model.UserName
             </tr>
         }
     </table>
-    @*@{
-        MvcHtmlString result = Html.Partial("Footer", Model.FooterData);
-        string finalResult = result.ToHtmlString().Replace("2015", "20000");
-    }
-    @MvcHtmlString.Create(finalResult)*@
-    @*<a href="/Employee/AddNew">Add New</a> <br />*@
-
-    <a href="/Authentication/Logout">Logout</a>
-    @{
-        Html.RenderAction("GetAddNewLink");
-    }
 </div>
+
+    }
+
