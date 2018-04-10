@@ -120,6 +120,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\BulkUploadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="DAL\SalesERPDAL.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="ViewModel\CreateEmployeeViewModel.cs" />
     <Compile Include="ViewModel\EmployeeListViewModel.cs" />
     <Compile Include="ViewModel\EmployeeViewModel.cs" />
+    <Compile Include="ViewModel\FileUploadViewModel.cs" />
     <Compile Include="ViewModel\FooterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,7 +148,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Readme.CodeGenerator.txt" />
     <Content Include="ReleaseNotes.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -187,6 +188,7 @@
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Employee\AddNewLink.cshtml" />
     <Content Include="Views\Shared\MyLayout.cshtml" />
+    <Content Include="Views\BulkUpload\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
